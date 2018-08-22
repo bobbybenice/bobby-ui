@@ -5,9 +5,10 @@
   "main": "build/index.js",
   "scripts": {
     "build": "babel lib -d build",
-    "lint": "eslint lib/**; exit 0",
-    "lint:watch": "esw -w lib/**",
-    "prepublish": "npm run build",
+    "build:watch": "babel lib -w -d build",
+    "lint": "eslint 'lib/**'; exit 0",
+    "lint:watch": "esw -w 'lib/**'",
+    "prepare": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -28,7 +29,7 @@
     "babel-preset-react": "^6.24.1",
     "eslint": "^5.4.0",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^7.11.1",
     "eslint-watch": "^4.0.2",
     "polished": "^2.0.0",
